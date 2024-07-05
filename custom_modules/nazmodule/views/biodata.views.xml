@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Update form view -->
+        <record id="nazmodule_biodata_form" model="ir.ui.view">
+            <field name="name">nazmodule.biodata.form</field>
+            <field name="model">nazmodule.biodata</field>
+            <field name="arch" type="xml">
+                <form string="Biodata">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Nama"/>
+                            <field name="fullname" string="Nama Lengkap"/>
+                            <field name="tanggal_lahir" string="Tanggal Lahir"/>
+                            <field name="umur" string="Umur"/>
+                            <field name="anak_keberapa" string="Anak ke Berapa"/>
+                            <field name="jenis_kelamin" string="Jenis Kelamin"/>
+                        </group>
+                        <group>
+                            <field name="foto" string="Foto" widget="image"/>
+                        </group>
+                        <group string="Pendidikan">
+                            <group>
+                                <field name="pendidikan_sd" string="SD" widget="checkbox"/>
+                                <field name="pendidikan_smp" string="SMP" widget="checkbox"/>
+                            </group>
+                            <group>
+                                <field name="pendidikan_sltp" string="SLTP" widget="checkbox"/>
+                                <field name="pendidikan_sma" string="SMA" widget="checkbox"/>
+                            </group>
+                            <group>
+                                <field name="pendidikan_smk" string="SMK" widget="checkbox"/>
+                                <field name="pendidikan_smu" string="SMU" widget="checkbox"/>
+                            </group>
+                            <group>
+                                <field name="pendidikan_slta" string="SLTA" widget="checkbox"/>
+                                <field name="pendidikan_kuliah" string="KULIAH" widget="checkbox"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Update tree view -->
+        <record id="nazmodule_biodata_tree" model="ir.ui.view">
+            <field name="name">nazmodule.biodata.tree</field>
+            <field name="model">nazmodule.biodata</field>
+            <field name="arch" type="xml">
+                <tree string="Biodata">
+                    <field name="name" string="Nama"/>
+                    <field name="fullname" string="Nama Lengkap"/>
+                    <field name="tanggal_lahir" string="Tanggal Lahir"/>
+                    <field name="umur" string="Umur"/>
+                    <field name="anak_keberapa" string="Anak ke Berapa"/>
+                    <field name="jenis_kelamin" string="Jenis Kelamin"/>
+                    <field name="pendidikan_sd" string="SD"/>
+                    <field name="pendidikan_smp" string="SMP"/>
+                    <field name="pendidikan_sltp" string="SLTP"/>
+                    <field name="pendidikan_sma" string="SMA"/>
+                    <field name="pendidikan_smk" string="SMK"/>
+                    <field name="pendidikan_smu" string="SMU"/>
+                    <field name="pendidikan_slta" string="SLTA"/>
+                    <field name="pendidikan_kuliah" string="KULIAH"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Update action -->
+        <record id="nazmodule_biodata_action" model="ir.actions.act_window">
+            <field name="name">Biodata</field>
+            <field name="res_model">nazmodule.biodata</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
